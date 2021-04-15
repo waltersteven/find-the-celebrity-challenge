@@ -5,7 +5,15 @@ import com.walterpariona.dto.Person;
 import java.util.List;
 
 public class FindCelebrityService {
+    /**
+     *
+     * @param possibleCelebrity
+     * @param people
+     * @return
+     */
     public boolean validateCelebrity(Person possibleCelebrity, List<Person> people) {
+        // In order to validate is a celebrity, we can check if everyone knows this person and also check the celebrity doesn't know anybody.
+        // Otherwise, person shouldn't be a celebrity.
         for (int i = 0; i < people.size(); i++) {
             if (people.get(i).getId() != possibleCelebrity.getId()
                     && (knowsPerson(possibleCelebrity, people.get(i)) || !knowsPerson(people.get(i), possibleCelebrity))) {
@@ -16,6 +24,11 @@ public class FindCelebrityService {
         return true;
     }
 
+    /**
+     *
+     * @param people
+     * @return
+     */
     public Person findPossibleCelebrity(List<Person> people) {
         Person possibleCelebrity = people.get(0);
 
@@ -30,11 +43,17 @@ public class FindCelebrityService {
         return possibleCelebrity;
     }
 
+    /**
+     *
+     * @param personA
+     * @param personB
+     * @return
+     */
     public boolean knowsPerson(Person personA, Person personB) {
+        // We can find if a person knows another person by checking personA's knownPeople list.
         if (personA.getKnownPeople().contains(personB.getId())) {
             return true;
         }
-
         return false;
     }
 }

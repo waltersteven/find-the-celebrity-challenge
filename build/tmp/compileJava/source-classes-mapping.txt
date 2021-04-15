@@ -1,8 +1,0 @@
-com/walterpariona/dto/Person.java
- com.walterpariona.dto.Person
-com/walterpariona/services/FindCelebrityService.java
- com.walterpariona.services.FindCelebrityService
-com/walterpariona/utils/Utils.java
- com.walterpariona.utils.Utils
-com/walterpariona/Main.java
- com.walterpariona.Main
