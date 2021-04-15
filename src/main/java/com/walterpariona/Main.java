@@ -8,8 +8,7 @@ import java.util.List;
 
 public class Main {
     // Author: Walter Pariona.
-    // Challenge: Find the celebrity.
-    // In a team of N people, a celebrity is known by everyone but he/she doesn't know anybody.
+    // Challenge: Find the celebrity: In a team of N people, a celebrity is known by everyone but he/she doesn't know anybody.
 
     public static void main(String[] args) {
 
